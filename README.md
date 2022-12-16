@@ -319,7 +319,7 @@ print("CMSC Courses count: " + str(len(cmsc_avg_gpa2)) + " or " + "KNES Courses 
 cmsc_avg_gpa2
 ```
   
-Additionally, we check the variances of the computer sciences and kinesiology average GPAs to see if they are equal enough to run the test and this check passes for us empirically. Therefore, we run the two sample t test on both dataframes, which we can do through the SciPy library.
+Additionally, we check the variances of the computer sciences and kinesiology average GPAs to see if they are equal enough to run the test and this check passes for us empirically. Therefore, we run the two sample t test on both NumPy arays, which we can do through the SciPy library.
   
 ```
 print(np.var(cmsc_avg_gpa2), np.var(knes_avg_gpa))
