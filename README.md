@@ -301,7 +301,7 @@ knes_grades_df
 ## Hypothesis Test
 In this section of the tutorial, we aim to see whether there is a statistically significant different in the mean average GPA of all CMSC (Computer Science) and KNES (Kinesiology) courses. We want to accomplish this using a two sample t test, where we are essentially testing whether two population means are equal. In this case, we are using the unpaired variation of the test because we can not assume that the samples are correlated. In this situation, our null hypothesis $H_0$ is that the population means are equal, i.e. $\mu_{difference} = 0$. Our alternative hypothesis $H_A$ then is that the population means are not equal, i.e. $\mu_{difference} \neq 0$.
   
-There are a few things to consider before we can actually run our two sample t test on the average GPAs in the computer science and kinesiology departments. First of all, we have to make sure the samples that we take are equal in size, and we find that 
+There are a few things to consider before we can actually run our two sample t test on the average GPAs in the computer science and kinesiology departments. First of all, we have to make sure the samples that we take are equal in size, and we find that there are 52 entries for computer science and 35 entries for kinesiology. Therefore, we cut off the last 18 entries in the kinesiology array to make their sizes equal. 
 
 ```
 # make numpy arrays out of the avg gpa column for both
@@ -318,6 +318,8 @@ cmsc_avg_gpa2 = np.delete(cmsc_avg_gpa, index)
 print("CMSC Courses count: " + str(len(cmsc_avg_gpa2)) + " or " + "KNES Courses count: " + str(len(knes_avg_gpa)))
 cmsc_avg_gpa2
 ```
+  
+Additionally, we check the variances of the computer sciences and kinesiology average GPAs to see if they are equal enough 
   
 ```
 print(np.var(cmsc_avg_gpa2), np.var(knes_avg_gpa))
