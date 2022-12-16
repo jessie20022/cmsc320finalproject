@@ -43,3 +43,12 @@ from sklearn import linear_model
 We will be collecting our data using the publicly available PlantTerp [API](https://planetterp.com/api/), where we can retrieve data on courses, professors, reviews and grades. There are 3 different endpoints that we want to consider in this project: /courses, /professors and /grades. 
 
 ### Course
+
+Name	Type	Required	Restrictions	Description
+department	string	true	none	none	
+course_number	string	true	none	none	
+title	string	true	none	none	
+description	string	true	none	none	
+credits	integer	true	none	none	
+professors	[string]	true	none	none	
+average_gpa	number	true	none	none
