@@ -114,3 +114,15 @@ all_courses_df
 
 all_courses_df.to_csv('all_courses.csv')
 ```
+
+```
+all_courses_df.head(5)
+```
+
+| average_gpa | professors |                                           reviews |                                        department | course_number | name |    title |                                 credits | description |                                         is_recent | description | is_recent |
+|------------:|-----------:|--------------------------------------------------:|--------------------------------------------------:|--------------:|-----:|---------:|----------------------------------------:|------------:|--------------------------------------------------:|------------:|----------:|
+|      2      |   3.407091 | ['Qin Wang', 'Abani Pradhan', 'Solmaz Alborzi'... | [{'professor': 'Shraddha Karanth', 'course': '... |          NFSC |  112 |  NFSC112 |            Food: Science and Technology |         3.0 | Introduction to the realm of food science, foo... |        True |      True |
+|      4      |   2.300000 | ['Emily Perez', 'Laura Williams', 'Douglas Ker... | [{'professor': 'Zita Nunes', 'course': 'AASP29... |          AASP | 298L | AASP298L | African-American Literature and Culture |         3.0 | <b>Cross-listed with:</b> ENGL234.\n<b>Credit ... |        True |      True |
+|      5      |   3.530045 | ['Justin Lohr', 'Sarah Pleydell', 'Catherine B... | [{'professor': 'Justin Lohr', 'course': 'ENGL1... |          ENGL | 101H | ENGL101H |                        Academic Writing |         3.0 | <b>Additional information:</b> Any student who... |        True |      True |
+|      6      |   2.839834 | ['Douglas Kern', 'Zita Nunes', 'Mary Washingto... | [{'professor': 'Zita Nunes', 'course': 'ENGL23... |          ENGL |  234 |  ENGL234 | African-American Literature and Culture |         3.0 | <b>Cross-listed with:</b> AASP298L.\n<b>Credit... |        True |      True |
+|      8      |   3.625573 | ['Guangming Zhang', 'Peter Chung', 'Abhijit Da... | [{'professor': 'Guangming Zhang', 'course': 'E... |          ENME |  470 |  ENME470 |                 Finite Element Analysis |         3.0 | <b>Restriction:</b> Senior standing; and permi... |        True |      True |
