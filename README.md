@@ -43,12 +43,12 @@ from sklearn import linear_model
 We will be collecting our data using the publicly available PlantTerp [API](https://planetterp.com/api/), where we can retrieve data on courses, professors, reviews and grades. There are 3 different endpoints that we want to consider in this project: /courses, /professors and /grades. 
 
 ### Course
-|      Name     |   Type   | Description |
-|:-------------:|:--------:|:-----------:|
-| department    | string   | none        |
-| course_number | string   | none        |
-| title         | string   | none        |
-| description   | string   | none        |
-| credits       | integer  | none        |
-| professors    | [string] | none        |
-| average_gpa   | number   | none        |
+|      Name     |   Type   |                              Description                              |
+|:-------------:|:--------:|:---------------------------------------------------------------------:|
+| department    | string   | The department in which the course is offered (i.e. CMSC, MATH, BMGT) |
+| course_number | string   | The numerical part of a course identifier (i.e. 320 in CMSC320)       |
+| title         | string   | The name of the course (i.e. "Introduction to Data Science")          |
+| description   | string   | The description of the course as shown on Testudo                     |
+| credits       | int      | The number of credits associated with the course.                     |
+| professors    | [string] | A list of professors that teach the course.                           |
+| average_gpa   | double   | The average GPA of all students who have taken the course.            |
