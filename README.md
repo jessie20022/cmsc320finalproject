@@ -323,6 +323,9 @@ knes_grades_df
 ```
   
 We notice here that the distribution of average GPAs for KNES is much more in line with the distribution for all courses, but the variance is still noticeably larger.
+  
+## Application
+An application that might prove to be potentially useful is coming up with some sort of ranking for professors based on their average rating that better reflects reality. Currently, the metric of average_rating is not necessarily the most accurate in determining how popular a professor is with his/her students. Is there a way to better capture this percieved popularity? A possible solution is to use the Bayesian average of the average rating, which takes into account the amount of reviews that that professor recieved. Let's try it out on CS professors and see if it matches our expectations as a CS student.
 
 ## Hypothesis Test
 In this section of the tutorial, we aim to see whether there is a statistically significant different in the mean average GPA of all CMSC (Computer Science) and KNES (Kinesiology) courses. We want to accomplish this using a two sample t test, where we are essentially testing whether two population means are equal. In this case, we are using the unpaired variation of the test because we can not assume that the samples are correlated. In this situation, our null hypothesis $H_0$ is that the population means are equal, i.e. $\mu_{difference} = 0$. Our alternative hypothesis $H_A$ then is that the population means are not equal, i.e. $\mu_{difference} \neq 0$.
