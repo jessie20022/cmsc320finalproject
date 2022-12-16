@@ -114,6 +114,23 @@ all_courses_df
 
 all_courses_df.to_csv('all_courses.csv')
 ```
+and we did a very similar procedure for the professors endpoint. However, to get grades, we had to reference our previous professors dataframe to be able to get our grades dataframe since professor is a required parameter for this endpoint. Thus,
+
+```
+grades_df = pd.DataFrame()
+
+for i in prof_df['name']:
+  api_url = 'https://api.planetterp.com/v1'
+  response = requests.get(api_url + "/grades?professor=" + i)
+  data = response.json()
+  temp = pd.DataFrame.from_dict(data)
+  grades_df = grades_df.append(temp)
+  time.sleep(0.1)
+
+grades_df
+
+grades_df.to_csv('grades_df.csv')
+```
 
 ```
 all_courses_df.head(5)
@@ -138,8 +155,8 @@ prof_df.head(5)
 |   ['ARTH389L', 'ARTH255', 'ARTH768', 'ARTH668A',...  |   2.8333          |   professor  |   [{'professor': 'Abigail McEwen', 'course': Non...  |   Abigail McEwen       |   mcewen            |
 |   ['PHYS405', 'PHYS275', 'PHYS758E', 'PHYS273', ...  |   4.3333          |   professor  |   [{'professor': 'Abolhassan Jawahery', 'course'...  |   Abolhassan Jawahery  |   jawahery          |
 |   ['STAT701', 'STAT700', 'STAT750', 'STAT650', '...  |   2.7000          |   professor  |   [{'professor': 'Abram Kagan', 'course': 'STAT4...  |   Abram Kagan          |   kagan             |
-  
 
+  
 ```
 grades_df.head(5)
 ```
@@ -151,7 +168,3 @@ grades_df.head(5)
 |   NFSC431   |   Abani Pradhan  |   201301    |   101      |   4   |   8   |   2   |   5   |   2  |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
 |   NFSC679R  |   Abani Pradhan  |   201308    |   101      |   1   |   3   |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
 |   NFSC431   |   Abani Pradhan  |   201401    |   101      |   4   |   5   |   2   |   3   |   3  |   2   |   1   |   0  |   0   |   0   |   1  |   0   |   0  |   1  |   0      |
-
-  
-  
-  jess was here
