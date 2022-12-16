@@ -202,3 +202,17 @@ plt.ylabel("Count")
 
 plt.show()
 ```
+
+```
+grade_counts = {grade: grades_df[grade].sum() for grade in ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F', 'W', 'Other']}
+
+x = list(grade_counts.keys())
+y = list(grade_counts.values())
+
+plt.bar(x, y)
+plt.title("Grades vs Count Distribution for all courses")
+plt.xlabel("Grades")
+plt.ylabel("Count")
+
+plt.show()
+```
