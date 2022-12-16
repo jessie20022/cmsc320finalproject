@@ -263,7 +263,7 @@ From these visualizations, we can take note of a few general trends that are sig
 * Average GPA Distribution
   * The median average GPA across all courses appears to hover around the 3.3 area, with a slightly left skewed distribution
 
-Now that we have an idea about our entire dataset, let's try to identify some potential new trends solely in the CS department. We will once again plot the distributions of average rating, average GPA and letter grades but this time only for entries in the CS department.
+Now that we have an idea about our entire dataset, let's try to identify some potential new trends in the CS department. We will once again plot the distributions of average rating, average GPA and letter grades but this time only for entries in the CS department.
 
 ```
 cmsc_courses_df = all_courses_df
@@ -292,7 +292,8 @@ for g, row in grades_df.iterrows():
 cmsc_grades_df = pd.DataFrame(cmsc_grades, columns=grades_df.columns)
 cmsc_grades_df
 ```
-
+The CMSC average GPA distribution appears noticeably left shifted compared to the original all courses average GPA distribution, with much wider variance. Now we will plot distributions of average rating, average GPA and letter grades but this time only for entries in the KNES department. 
+  
 ```
 knes_courses_df = all_courses_df
 knes_courses_df = knes_courses_df.loc[knes_courses_df["department"] == "KNES"]
@@ -342,7 +343,7 @@ print("CMSC Courses count: " + str(len(cmsc_avg_gpa2)) + " or " + "KNES Courses 
 cmsc_avg_gpa2
 ```
   
-Additionally, we check the variances of the computer sciences and kinesiology average GPAs to see if they are equal enough to run the test and this check passes for us empirically. Therefore, we run the two sample t test on both NumPy arays, which we can do through the SciPy library.
+Additionally, we check the variances of the computer sciences and kinesiology average GPAs to see if they are equal enough to run the test and this check passes for us empirically (even if this does not hold, setting equal_var=False yields a very similar p-value). Therefore, we run the two sample t test on both NumPy arays, which we can do through the SciPy library.
   
 ```
 print(np.var(cmsc_avg_gpa2), np.var(knes_avg_gpa))
