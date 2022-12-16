@@ -258,3 +258,9 @@ for g, row in grades_df.iterrows():
 cmsc_grades_df = pd.DataFrame(cmsc_grades, columns=grades_df.columns)
 cmsc_grades_df
 ```
+
+```
+bmgt_courses_df = all_courses_df
+bmgt_courses_df = bmgt_courses_df.loc[bmgt_courses_df["department"] == "BMGT"]
+bmgt_courses_df
+```
