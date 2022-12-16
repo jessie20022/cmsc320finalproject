@@ -25,7 +25,7 @@ Matplotlib: https://matplotlib.org/stable/api/index Matplotlib is ython's plotti
 Scikit-learn: https://scikit-learn.org/stable/user_guide.html Scikit-learn is Python's machine learning library consisting of tools for data modeling and predictions. Some algorithms scikit-learn is capable of are classification, regression, clustering, preprocessing and many more. More information can be found in the link above.
 
 ```
-  import requests
-  import pandas as pd
-  import time
+import requests
+import pandas as pd
+import time
 ```
