@@ -231,3 +231,7 @@ plt.ylabel("Count")
 
 plt.show()
 ```
+
+From these visualiations, we can take note of a few general trends that are significant (for general data across all departments):
+* It appears that much more reviews that are left on PlanetTerp are overwhelmingly positive. The most reviews left were a 5 rating, and the count incrementally decreases for each consecutive lower rating
+* It also appears that As are the mostly commonly recieved grade, which seems to be in line with the 
