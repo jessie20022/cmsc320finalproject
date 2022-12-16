@@ -246,3 +246,15 @@ cmsc_courses_df = all_courses_df
 cmsc_courses_df = cmsc_courses_df.loc[cmsc_courses_df["department"] == "CMSC"]
 cmsc_courses_df
 ```
+
+  
+```
+cmsc_grades = []
+cmsc_grades_df = pd.DataFrame()
+for g, row in grades_df.iterrows():
+    if row['course'].startswith('CMSC'):
+      cmsc_grades.append(row)
+
+cmsc_grades_df = pd.DataFrame(cmsc_grades, columns=grades_df.columns)
+cmsc_grades_df
+```
