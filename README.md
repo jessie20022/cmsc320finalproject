@@ -325,7 +325,7 @@ knes_grades_df
 We notice here that the distribution of average GPAs for KNES is much more in line with the distribution for all courses, but the variance is still noticeably larger.
   
 ## Application
-An application that might prove to be potentially useful is coming up with some sort of ranking for professors based on their average rating that better reflects reality. Currently, the metric of average_rating is not necessarily the most accurate in determining how popular a professor is with his/her students. Is there a way to better capture this percieved popularity? A possible solution is to use the Bayesian average of the average rating, which takes into account the amount of reviews that that professor recieved. Let's try it out on CS professors and see if it matches our expectations as a CS student.
+An application that might prove to be potentially useful is coming up with some sort of ranking for professors based on their average rating that better reflects reality. Currently, the metric of average_rating is not necessarily the most accurate in determining how popular a professor is with his/her students because a single 5 rating will automatically put that professor at the top. Is there a way to better capture this percieved popularity? A possible solution is to use the Bayesian average of the average rating, which takes into account the amount of reviews that that professor recieved. Let's try it out on CS professors and see if it matches our expectations as a CS student.
 
 ```
 cmsc_prof_df["review_count"] = cmsc_prof_df["reviews"].apply(lambda x: x.count('{'))
