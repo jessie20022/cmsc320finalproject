@@ -186,6 +186,8 @@ grades_df.head(5)
 |   NFSC679R  |   Abani Pradhan  |   201308    |   101      |   1   |   3   |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
 |   NFSC431   |   Abani Pradhan  |   201401    |   101      |   4   |   5   |   2   |   3   |   3  |   2   |   1   |   0  |   0   |   0   |   1  |   0   |   0  |   1  |   0      |
 
+Now that we know what some entries in our dataset looks like, we want to get a better idea of what our dataset consists of and to do this we can create some visualizations to better understand the shape and tendencies of our data. Here, we have decided to plot the distribution of average rating, average GPA and letter grades.
+  
 ```
 from matplotlib import pyplot as plt
 import numpy as np
