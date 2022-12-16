@@ -42,6 +42,8 @@ from sklearn import linear_model
 ## Data Collection
 We will be collecting our data using the publicly available PlantTerp [API](https://planetterp.com/api/), where we can retrieve data on courses, professors, reviews and grades. There are 3 different endpoints that we want to consider in this project: /courses, /professors and /grades. 
 
+The following is the response schema for each of the 3 endpoints.
+
 ### Course
 |      Name     |   Type   |                              Description                              |
 |:-------------:|:--------:|:---------------------------------------------------------------------:|
@@ -81,3 +83,8 @@ We will be collecting our data using the publicly available PlantTerp [API](http
 | D+        | integer | Count of D+                                           |
 | D         | integer | Count of D                                            |
 | D-        | integer | Count of D-                                           |
+| F         | integer | Count of F                                            |
+| W         | integer | Count of W                                            |
+| Other     | integer | Count of Other                                        |
+
+Initially, we 
