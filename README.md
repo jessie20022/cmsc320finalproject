@@ -321,6 +321,8 @@ for g, row in grades_df.iterrows():
 knes_grades_df = pd.DataFrame(knes_grades, columns=grades_df.columns)
 knes_grades_df
 ```
+  
+We notice here that the distribution of average GPAs for KNES is much more in line with the distribution for all courses, but the variance is still noticeably larger.
 
 ## Hypothesis Test
 In this section of the tutorial, we aim to see whether there is a statistically significant different in the mean average GPA of all CMSC (Computer Science) and KNES (Kinesiology) courses. We want to accomplish this using a two sample t test, where we are essentially testing whether two population means are equal. In this case, we are using the unpaired variation of the test because we can not assume that the samples are correlated. In this situation, our null hypothesis $H_0$ is that the population means are equal, i.e. $\mu_{difference} = 0$. Our alternative hypothesis $H_A$ then is that the population means are not equal, i.e. $\mu_{difference} \neq 0$.
