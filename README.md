@@ -145,6 +145,8 @@ prof_df = prof_df.loc[prof_df["reviews"] == prof_df["reviews"]]
 grades_df = pd.read_csv('grades_df.csv', na_filter=True, na_values='[]', index_col=0)
 ```
 
+Now let's observe a few entries of the 3 dataframes we created, all_courses_df, prof_df and grades_df.
+
 ```
 all_courses_df.head(5)
 ```
