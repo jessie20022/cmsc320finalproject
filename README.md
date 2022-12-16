@@ -232,11 +232,14 @@ plt.show()
 From these visualiations, we can take note of a few general trends that are significant (for general data across all departments):
 * Average Rating Distribution
   * It appears that much more reviews that are left on PlanetTerp are overwhelmingly positive. The most reviews left were a 5 rating, and the count incrementally decreases for each consecutive lower rating
-  * This appears as a completely left skewed distribution, which agrees with our sentiment that most of the observations occur in the medium/high range of the distribution.
+  * This appears as a completely left skewed distribution, which agrees with our sentiment that most of the observations occur in the medium/high range of the distribution
 * Grades Distribution
-  * It appears that As are the mostly commonly recieved grade, which seems to be in line with the 
+  * It appears that As are the mostly commonly recieved grade, which could be related to our previous observation that most reviews were a full 5 stars
+  * Only considering letter grades (F-A+), this appears to be a right-skewed distribution, which means a lot of our observations occur in the left part of the distribution (the A range)
 * Average GPA Distribution
+  * The median average GPA across all courses appears to hover around the 3.3 area, with a slightly left skewed distribution
 
+Now that we have an idea about our entire dataset
   
 ```
 cmsc_courses_df = all_courses_df
