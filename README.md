@@ -270,29 +270,29 @@ cmsc_grades_df
 ```
 
 ```
-bmgt_courses_df = all_courses_df
-bmgt_courses_df = bmgt_courses_df.loc[bmgt_courses_df["department"] == "BMGT"]
-bmgt_courses_df
+knes_courses_df = all_courses_df
+knes_courses_df = knes_courses_df.loc[knes_courses_df["department"] == "KNES"]
+knes_courses_df
 ```
 
 ```
-bmgt_prof = []
-bmgt_prof_df = pd.DataFrame()
+knes_prof = []
+knes_prof_df = pd.DataFrame()
 for index, row in prof_df.iterrows():
-    if "BMGT" in row['courses']:
-      bmgt_prof.append(row)
+    if "KNES" in row['courses']:
+      knes_prof.append(row)
 
-bmgt_prof_df = pd.DataFrame(bmgt_prof, columns=prof_df.columns)
-bmgt_prof_df
+knes_prof_df = pd.DataFrame(knes_prof, columns=prof_df.columns)
+knes_prof_df
 ```
   
 ```
-bmgt_grades = []
-bmgt_grades_df = pd.DataFrame()
+knes_grades = []
+knes_grades_df = pd.DataFrame()
 for g, row in grades_df.iterrows():
-    if row['course'].startswith('BMGT'):
-      bmgt_grades.append(row)
+    if row['course'].startswith('KNES'):
+      knes_grades.append(row)
 
-bmgt_grades_df = pd.DataFrame(bmgt_grades, columns=grades_df.columns)
-bmgt_grades_df
+knes_grades_df = pd.DataFrame(knes_grades, columns=grades_df.columns)
+knes_grades_df
 ```
