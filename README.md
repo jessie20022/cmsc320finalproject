@@ -10,10 +10,9 @@ by Tommy Chan, Alex Chen, Jessica Wu
 Reviews have become a very critical part of any student's education, especially when trying to gauge whether a professor's teaching style is effective for the student. However, reviews might sometimes be more reflective of personal resentment rather than an objective view of whether a professor's class was fair and effective in communicating the course material. Therefore, through this tutorial we aim to see whether the average GPA in a course has an impact on the reviews that that professor recieves. We specifically want to observe 
 
 ## Tools and Libraries:
-Requests: https://requests.readthedocs.io/en/latest/
-Requests is a library in Python created in the early 2010s that creates a user-friendly way to extract information from HTTP websites. The requests.get function found in this tutorial is used commonly to retrieve the data from the provided websites. The receiving end (commonly seen as the "response" variable) has mulitple functions and contains lots of information extracted from the HTTP. More functions and information can be found in the website linked above.
+[Requests](https://requests.readthedocs.io/en/latest/): Requests is a library in Python created in the early 2010s that creates a user-friendly way to extract information from HTTP websites. The requests.get function found in this tutorial is used commonly to retrieve the data from the provided websites. The receiving end (commonly seen as the "response" variable) has mulitple functions and contains lots of information extracted from the HTTP. More functions and information can be found in the website linked above.
 
-Pandas: https://pandas.pydata.org/docs/user_guide/index.html#user-guide
+[Pandas](https://pandas.pydata.org/docs/user_guide/index.html#user-guide): 
 Python Pandas is a extremely useful data analysis/manipulation and documentation tool released in the late 2000s. The storage of data and analysis done in this tutorial is mainly done with Pandas. The user guide linked above provides documentation of functions and uses of pandas.
 
 Time: https://docs.python.org/3/library/time.html *The time toolbox is a useful function that is used in this tutorial to configure for loops. More functions can be found in the link above. *
