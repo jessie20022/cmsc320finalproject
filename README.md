@@ -36,6 +36,7 @@ import pandas as pd
 import time
 import numpy as np
 from matplotlib import pyplot as plt
+import scipy.stats as stats
 from sklearn import linear_model
 ```
 
@@ -314,6 +315,11 @@ cmsc_avg_gpa2 = np.delete(cmsc_avg_gpa, index)
 
 print("CMSC Courses count: " + str(len(cmsc_avg_gpa2)) + " or " + "KNES Courses count: " + str(len(knes_avg_gpa)))
 cmsc_avg_gpa2
+```
+  
+```
+print(np.var(cmsc_avg_gpa2), np.var(knes_avg_gpa))
+stats.ttest_ind(a=cmsc_avg_gpa2, b=knes_avg_gpa, equal_var=True)
 ```
   
 Expanding upon this, as we feel the need to incorporate other departments into our calculation, we would likely need an ANOVA test, which would test for whether any statistically significant differences exist between the means of three or more groups (which would be the different departments in our case). This can be followed up with Tukey's procedure to find the means that are significantly different from each other.
