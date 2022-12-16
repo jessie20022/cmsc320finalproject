@@ -319,11 +319,13 @@ print("CMSC Courses count: " + str(len(cmsc_avg_gpa2)) + " or " + "KNES Courses 
 cmsc_avg_gpa2
 ```
   
-Additionally, we check the variances of the computer sciences and kinesiology average GPAs to see if they are equal enough 
+Additionally, we check the variances of the computer sciences and kinesiology average GPAs to see if they are equal enough to run the test and this check passes for us empirically. Therefore, we run the two sample t test on both dataframes, which we can do through the SciPy library.
   
 ```
 print(np.var(cmsc_avg_gpa2), np.var(knes_avg_gpa))
 stats.ttest_ind(a=cmsc_avg_gpa2, b=knes_avg_gpa, equal_var=True)
 ```
+
+We find that we get a p-value of ~0.002475, which would reject the null hypothesis for all reasonable values of significance level $\alpha$ in favor of the alternative hypothesis. Therefore, we can conclude that the CMSC and KNES average GPA means are not equal, and that the CMSC and KNES students have significantly different average GPAs.
   
 Expanding upon this, as we feel the need to incorporate other departments into our calculation, we would likely need an ANOVA test, which would test for whether any statistically significant differences exist between the means of three or more groups (which would be the different departments in our case). This can be followed up with Tukey's procedure to find the means that are significantly different from each other.
