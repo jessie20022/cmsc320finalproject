@@ -90,4 +90,4 @@ The following is the response schema for each of the 3 endpoints.
 | W         | integer | Count of W                                            |
 | Other     | integer | Count of Other                                        |
 
-On our initial observation using the PlanetTerp API, we found that the API has a limit of 100 responses with an offset parameter. Therefore intuitively, to build our dataframes, we 
+On our initial observation using the PlanetTerp API, we found that the API has a limit of 100 responses with an offset parameter. Therefore intuitively, to build our dataframes, we would have to query our API, increment the offset by 100 and then continue to query until we run out of data.
