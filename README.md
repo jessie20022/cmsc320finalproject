@@ -128,6 +128,8 @@ all_courses_df.head(5)
 |   3.625573     |   ['Guangming Zhang', 'Peter Chung', 'Abhijit Da...  |   [{'professor': 'Guangming Zhang', 'course': 'E...  |   ENME        |   470            |   ENME470   |   Finite Element Analysis                  |   3.0      |   <b>Restriction:</b> Senior standing; and permi...  |   TRUE       |
   
 
- 
+ ```
+  u gay
+  ```
   
   
