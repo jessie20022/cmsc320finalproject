@@ -222,7 +222,7 @@ index = np.asarray([i for i in range(1, 5)])
 
 plt.hist(all_courses_df["average_gpa"], bins=12)
 plt.xticks(index)
-plt.title("Averge GPA vs Count Distribution for all courses")
+plt.title("Average GPA vs Count Distribution for all courses")
 plt.xlabel("Average GPA")
 plt.ylabel("Count")
 
@@ -230,7 +230,9 @@ plt.show()
 ```
 
 From these visualiations, we can take note of a few general trends that are significant (for general data across all departments):
-* Average Rating
+* Average Rating Distribution
   * It appears that much more reviews that are left on PlanetTerp are overwhelmingly positive. The most reviews left were a 5 rating, and the count incrementally decreases for each consecutive lower rating
   * This appears as a completely left skewed distribution, which agrees with our sentiment that most of the observations occur in the medium/high range of the distribution.
-* It appears that As are the mostly commonly recieved grade, which seems to be in line with the 
+* Grades Distribution
+  * It appears that As are the mostly commonly recieved grade, which seems to be in line with the 
+* Average GPA Distribution
