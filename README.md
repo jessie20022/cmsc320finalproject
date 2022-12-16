@@ -31,4 +31,5 @@ import pandas as pd
 import time
 import numpy as np
 from matplotlib import pyplot as plt
+from sklearn import linear_model
 ```
