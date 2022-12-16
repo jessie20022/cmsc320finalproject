@@ -23,9 +23,11 @@ Python Pandas is a extremely useful data analysis/manipulation and documentation
 
 [Scikit-learn](https://scikit-learn.org/stable/user_guide.html): Scikit-learn is Python's machine learning library consisting of tools for data modeling and predictions. Some algorithms scikit-learn is capable of are classification, regression, clustering, preprocessing and many more. More information can be found in the link above.
 
+Now let's import these libraries with the following code:
 
 ```
 import requests
 import pandas as pd
 import time
+import numpy as np
 ```
