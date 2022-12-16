@@ -61,3 +61,23 @@ We will be collecting our data using the publicly available PlantTerp [API](http
 | type           | string   | Professor or TA                                                             |
 | courses        | [string] | A list of courses that this professor teaches                               |
 | average_rating | double   | The average of all ratings given to this professor                          |
+
+### Grades
+|    Name   |   Type  |                      Description                      |
+|:---------:|:-------:|:-----------------------------------------------------:|
+| course    | string  | The course we are getting grades for                  |
+| professor | string  | The professor giving the following grades             |
+| semester  | string  | The semester when the grades were given               |
+| section   | string  | The section of the course where the grades were given |
+| A+        | integer | Count of A+                                           |
+| A         | integer | Count of A                                            |
+| A-        | integer | Count of A-                                           |
+| B+        | integer | Count of B+                                           |
+| B         | integer | Count of B                                            |
+| B-        | integer | Count of B-                                           |
+| C+        | integer | Count of C+                                           |
+| C         | integer | Count of C                                            |
+| C-        | integer | Count of C-                                           |
+| D+        | integer | Count of D+                                           |
+| D         | integer | Count of D                                            |
+| D-        | integer | Count of D-                                           |
