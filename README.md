@@ -30,4 +30,5 @@ import requests
 import pandas as pd
 import time
 import numpy as np
+from matplotlib import pyplot as plt
 ```
