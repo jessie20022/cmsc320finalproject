@@ -296,3 +296,6 @@ for g, row in grades_df.iterrows():
 knes_grades_df = pd.DataFrame(knes_grades, columns=grades_df.columns)
 knes_grades_df
 ```
+
+## Hypothesis Test
+In this section of the tutorial, we aim to see whether there is a statistically significant different in the mean average GPA of all CMSC (Computer Science) and KNES (Kinesiology) courses. We want to accomplish this using a two sample t test, where we are essentially testing whether two population means are equal. 
