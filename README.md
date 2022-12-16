@@ -1,4 +1,4 @@
-# The Impact of Course Average GPA on Professor Reviews
+# The Impact of Course Department GPA on Average GPA
 
 CMSC320 Final Project (Fall 2022)
 
