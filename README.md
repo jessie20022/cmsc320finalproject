@@ -40,4 +40,4 @@ from sklearn import linear_model
 ```
 
 ## Data Collection
-We will 
+We will be collecting our data using the publicly available PlantTerp API, where we can retrieve data on courses, professors, reviews and grades. 
