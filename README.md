@@ -338,7 +338,7 @@ def calcAvgGPA(prof, df):
     return sum / count
 ```
 
-This function will help 
+Later, you will see that we want to graph a scatter plot of average grades compared to the average reviews for each professor in the CMSC and KNES departments. This function will help get the average GPA for each professor entered into its parameter.
   
 ```
 scat_cmsc_df = pd.DataFrame()
@@ -354,13 +354,13 @@ for i, row in scat_cmsc_df.iterrows():
 scat_cmsc_df
 ```
   
-This scatterplot
+Here, we are creating a new dataframe to store all of the data we will need to graph our scatterplot by using existing data from previous dataframes and calculating the average GPAs for each professor using the prior function created. 
   
 ```
 scat_cmsc_df.plot.scatter(x='total_average_gpa', y='average_rating')
 ```
 
-Graphed into a scatterplot,
+Graphed into a scatterplot, the data from the scat_cmsc_df dataframe is displayed and shows many points in the 0 end and higher ends. The reason for many points in the 0 region for average GPA is because the grades_df contains rows of grade data where no grade was earned, resulting in a 0 GPA. This occurs for a few professors. However, there are many professors with high average GPA and high average ratings and low points where it's a high average GPA with a low rating.
   
 ```
 scat_knes_df = pd.DataFrame()
@@ -376,13 +376,13 @@ for i, row in scat_knes_df.iterrows():
 scat_knes_df
 ```
 
-This dataframe will help
+Like scat_cmsc_df, we are once again creating a new dataframe to store all of the data we will need to graph our scatterplot for KNES professors by using existing data and calculating the average GPAs for each professor in KNES using the prior function calcAvgGPA. 
   
 ```
 scat_knes_df.plot.scatter(x='total_average_gpa', y='average_rating')
 ```
 
-This scatterplot helps show
+This scatterplot also shows the comparison of total average GPA to the average rating. There are much fewer data points than compared to the CMSC scatter plot, however it is still noticible that there are few points where it has a high average GPA and a low review, unlike the majority of points where there is a high average rating and a high total average GPA.
   
 ## Application
 An application that might prove to be potentially useful is coming up with some sort of ranking for professors based on their average rating that better reflects reality. Currently, the metric of average_rating is not necessarily the most accurate in determining how popular a professor is with his/her students because a single 5 rating will automatically put that professor at the top. Is there a way to better capture this percieved popularity? A possible solution is to use the Bayesian average of the average rating, which takes into account the amount of reviews that that professor recieved. Let's try it out on CS professors and see if it matches our expectations as a CS student.
