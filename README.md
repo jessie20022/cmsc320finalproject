@@ -10,6 +10,11 @@ by Tommy Chan, Alex Chen, Jessica Wu
 Reviews have become a very critical part of any student's education, especially when trying to gauge whether a professor's teaching style is effective for the student. However, reviews might sometimes be more reflective of personal resentment rather than an objective view of whether a professor's class was fair and effective in communicating the course material. Therefore, through this tutorial we aim to see whether the average GPA in a course has an impact on the reviews that that professor recieves. We specifically want to observe 
 
 ## Tools and Libraries:
+We will be using Python 3 (you can download the latest version [here](https://www.python.org/downloads/)) for this final tutorial. This will be the programming language that all of our code will be written in and is the programming language of choice for many data science applications.
+
+Additionally, we will be using external libraries on top of what is provided to us in the default Python environment. Appropriate documentation and additional information is given.
+
+
 [Requests](https://requests.readthedocs.io/en/latest/): Requests is a library in Python created in the early 2010s that creates a user-friendly way to extract information from HTTP websites. The requests.get function found in this tutorial is used commonly to retrieve the data from the provided websites. The receiving end (commonly seen as the "response" variable) has mulitple functions and contains lots of information extracted from the HTTP. More functions and information can be found in the website linked above.
 
 [Pandas](https://pandas.pydata.org/docs/user_guide/index.html#user-guide): 
