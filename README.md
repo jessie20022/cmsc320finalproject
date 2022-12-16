@@ -126,10 +126,9 @@ all_courses_df.head(5)
 |   3.530045     |   ['Justin Lohr', 'Sarah Pleydell', 'Catherine B...  |   [{'professor': 'Justin Lohr', 'course': 'ENGL1...  |   ENGL        |   101H           |   ENGL101H  |   Academic Writing                         |   3.0      |   <b>Additional information:</b> Any student who...  |   TRUE       |
 |   2.839834     |   ['Douglas Kern', 'Zita Nunes', 'Mary Washingto...  |   [{'professor': 'Zita Nunes', 'course': 'ENGL23...  |   ENGL        |   234            |   ENGL234   |   African-American Literature and Culture  |   3.0      |   <b>Cross-listed with:</b> AASP298L.\n<b>Credit...  |   TRUE       |
 |   3.625573     |   ['Guangming Zhang', 'Peter Chung', 'Abhijit Da...  |   [{'professor': 'Guangming Zhang', 'course': 'E...  |   ENME        |   470            |   ENME470   |   Finite Element Analysis                  |   3.0      |   <b>Restriction:</b> Senior standing; and permi...  |   TRUE       |
-  
 
- ```
-  u gay
-  ```
+```
+prof_df.head(5)
+```
   
   
