@@ -126,9 +126,28 @@ all_courses_df.head(5)
 |   3.530045     |   ['Justin Lohr', 'Sarah Pleydell', 'Catherine B...  |   [{'professor': 'Justin Lohr', 'course': 'ENGL1...  |   ENGL        |   101H           |   ENGL101H  |   Academic Writing                         |   3.0      |   <b>Additional information:</b> Any student who...  |   TRUE       |
 |   2.839834     |   ['Douglas Kern', 'Zita Nunes', 'Mary Washingto...  |   [{'professor': 'Zita Nunes', 'course': 'ENGL23...  |   ENGL        |   234            |   ENGL234   |   African-American Literature and Culture  |   3.0      |   <b>Cross-listed with:</b> AASP298L.\n<b>Credit...  |   TRUE       |
 |   3.625573     |   ['Guangming Zhang', 'Peter Chung', 'Abhijit Da...  |   [{'professor': 'Guangming Zhang', 'course': 'E...  |   ENME        |   470            |   ENME470   |   Finite Element Analysis                  |   3.0      |   <b>Restriction:</b> Senior standing; and permi...  |   TRUE       |
-
+  
 ```
 prof_df.head(5)
 ```
   
+|   courses                                            |   average_rating  |   type       |   reviews                                            |   name                 |   slug              |
+|------------------------------------------------------|-------------------|--------------|------------------------------------------------------|------------------------|---------------------|
+|   ['NFSC431', 'NFSC679R', 'NFSC112', 'HLTH672', ...  |   5.0000          |   professor  |   [{'professor': 'Abani Pradhan', 'course': None...  |   Abani Pradhan        |   pradhan           |
+|   ['ENME674', 'ENMA300', 'ENME684', 'ENME489Z', ...  |   4.3333          |   professor  |   [{'professor': 'Abhijit Dasgupta', 'course': '...  |   Abhijit Dasgupta     |   dasgupta_abhijit  |
+|   ['ARTH389L', 'ARTH255', 'ARTH768', 'ARTH668A',...  |   2.8333          |   professor  |   [{'professor': 'Abigail McEwen', 'course': Non...  |   Abigail McEwen       |   mcewen            |
+|   ['PHYS405', 'PHYS275', 'PHYS758E', 'PHYS273', ...  |   4.3333          |   professor  |   [{'professor': 'Abolhassan Jawahery', 'course'...  |   Abolhassan Jawahery  |   jawahery          |
+|   ['STAT701', 'STAT700', 'STAT750', 'STAT650', '...  |   2.7000          |   professor  |   [{'professor': 'Abram Kagan', 'course': 'STAT4...  |   Abram Kagan          |   kagan             |
   
+
+```
+grades_df.head(5)
+```
+ 
+|   course    |   professor      |   semester  |   section  |   A+  |   A   |   A-  |   B+  |   B  |   B-  |   C+  |   C  |   C-  |   D+  |   D  |   D-  |   F  |   W  |   Other  |
+|-------------|------------------|-------------|------------|-------|-------|-------|-------|------|-------|-------|------|-------|-------|------|-------|------|------|----------|
+|   NFSC431   |   Abani Pradhan  |   201201    |   101      |   0   |   10  |   0   |   0   |   3  |   0   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   1  |   0      |
+|   NFSC679R  |   Abani Pradhan  |   201208    |   101      |   2   |   5   |   0   |   0   |   0  |   0   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
+|   NFSC431   |   Abani Pradhan  |   201301    |   101      |   4   |   8   |   2   |   5   |   2  |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
+|   NFSC679R  |   Abani Pradhan  |   201308    |   101      |   1   |   3   |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
+|   NFSC431   |   Abani Pradhan  |   201401    |   101      |   4   |   5   |   2   |   3   |   3  |   2   |   1   |   0  |   0   |   0   |   1  |   0   |   0  |   1  |   0      |
