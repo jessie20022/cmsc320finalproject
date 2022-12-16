@@ -40,4 +40,4 @@ from sklearn import linear_model
 ```
 
 ## Data Collection
-We will be collecting our data using the publicly available PlantTerp [API](https://planetterp.com/api/), where we can retrieve data on courses, professors, reviews and grades. There are 3 endpoints we are considering
+We will be collecting our data using the publicly available PlantTerp [API](https://planetterp.com/api/), where we can retrieve data on courses, professors, reviews and grades. There are 3 different endpoints that we want to consider in this project: /courses, /professors and /grades.
