@@ -219,3 +219,15 @@ plt.show()
 
 From these visualiations, we can take note of a few general trends:
 * It appears that much more reviews that are left on PlanetTerp are 
+
+```
+index = np.asarray([i for i in range(1, 5)])
+
+plt.hist(all_courses_df["average_gpa"], bins=12)
+plt.xticks(index)
+plt.title("Averge GPA vs Count Distribution for all courses")
+plt.xlabel("Average GPA")
+plt.ylabel("Count")
+
+plt.show()
+```
