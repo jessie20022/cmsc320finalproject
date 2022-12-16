@@ -45,6 +45,7 @@ We will be collecting our data using the publicly available PlantTerp [API](http
 The following is the response schema for each of the 3 endpoints.
 
 ### Course
+
 |      Name     |   Type   |                              Description                              |
 |:-------------:|:--------:|:---------------------------------------------------------------------:|
 | department    | string   | The department in which the course is offered (i.e. CMSC, MATH, BMGT) |
@@ -56,6 +57,7 @@ The following is the response schema for each of the 3 endpoints.
 | average_gpa   | double   | The average GPA of all students who have taken the course.            |
 
 ### Professor
+
 |      Name      |   Type   |                                 Description                                 |
 |:--------------:|:--------:|:---------------------------------------------------------------------------:|
 | name           | string   | The name of the professor (Jon Snow)                                        |
@@ -65,6 +67,7 @@ The following is the response schema for each of the 3 endpoints.
 | average_rating | double   | The average of all ratings given to this professor                          |
 
 ### Grades
+
 |    Name   |   Type  |                      Description                      |
 |:---------:|:-------:|:-----------------------------------------------------:|
 | course    | string  | The course we are getting grades for                  |
@@ -87,4 +90,4 @@ The following is the response schema for each of the 3 endpoints.
 | W         | integer | Count of W                                            |
 | Other     | integer | Count of Other                                        |
 
-Initially, we 
+The PlanetTerp APi has a limit of Initially, we 
