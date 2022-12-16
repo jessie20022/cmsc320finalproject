@@ -38,3 +38,6 @@ import numpy as np
 from matplotlib import pyplot as plt
 from sklearn import linear_model
 ```
+
+## Data Collection
+We will 
