@@ -236,3 +236,10 @@ From these visualiations, we can take note of a few general trends that are sign
 * Grades Distribution
   * It appears that As are the mostly commonly recieved grade, which seems to be in line with the 
 * Average GPA Distribution
+
+  
+```
+cmsc_courses_df = all_courses_df
+cmsc_courses_df = cmsc_courses_df.loc[cmsc_courses_df["department"] == "CMSC"]
+cmsc_courses_df
+```
