@@ -52,3 +52,12 @@ We will be collecting our data using the publicly available PlantTerp [API](http
 | credits       | int      | The number of credits associated with the course.                     |
 | professors    | [string] | A list of professors that teach the course.                           |
 | average_gpa   | double   | The average GPA of all students who have taken the course.            |
+
+### Professor
+|      Name      |   Type   |                                 Description                                 |
+|:--------------:|:--------:|:---------------------------------------------------------------------------:|
+| name           | string   | The name of the professor (Jon Snow)                                        |
+| slug           | string   | A unique identifier for the professor, commonly their last name (e.g. Snow) |
+| type           | string   | Professor or TA                                                             |
+| courses        | [string] | A list of courses that this professor teaches                               |
+| average_rating | double   | The average of all ratings given to this professor                          |
