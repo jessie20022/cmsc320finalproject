@@ -324,6 +324,66 @@ knes_grades_df
   
 We notice here that the distribution of average GPAs for KNES is much more in line with the distribution for all courses, but the variance is still noticeably larger.
   
+```
+def calcAvgGPA(prof, df):
+  sum = 0
+  count = 0
+  for i, row in df.iterrows():
+    if row['professor'] == prof:
+      sum = sum + 4*row['A+'] + 4*row['A'] + 3.7*row['A-'] + 3.3*row['B+'] + 3*row['B'] + 2.7*row['B-'] + 2.3*row['C+'] + 2*row['C'] + 1.7*row['C-'] + 1.3*row['D+'] + 1*row['D'] + .7*row['D-'] + 0*row['F']
+      count = count + row['A+'] + row['A'] + row['A-'] + row['B+'] + row['B'] + row['B-'] + row['C+'] + row['C'] + row['C-'] + row['D+'] + row['D'] + row['D-'] + row['F']
+  if count == 0:
+    return sum
+  else:
+    return sum / count
+```
+
+This function will help 
+  
+```
+scat_cmsc_df = pd.DataFrame()
+
+scat_cmsc_df['name'] = cmsc_prof_df['name']
+scat_cmsc_df['average_rating'] = cmsc_prof_df['average_rating']
+scat_cmsc_df['total_average_gpa'] = 0
+
+for i, row in scat_cmsc_df.iterrows():
+  scat_cmsc_df.at[i, 'total_average_gpa'] = calcAvgGPA(row['name'], cmsc_grades_df)
+
+
+scat_cmsc_df
+```
+  
+This scatterplot
+  
+```
+scat_cmsc_df.plot.scatter(x='total_average_gpa', y='average_rating')
+```
+
+Graphed into a scatterplot,
+  
+```
+scat_knes_df = pd.DataFrame()
+
+scat_knes_df['name'] = knes_prof_df['name']
+scat_knes_df['average_rating'] = knes_prof_df['average_rating']
+scat_knes_df['total_average_gpa'] = 0
+
+for i, row in scat_knes_df.iterrows():
+  scat_knes_df.at[i, 'total_average_gpa'] = calcAvgGPA(row['name'], knes_grades_df)
+
+
+scat_knes_df
+```
+
+This dataframe will help
+  
+```
+scat_knes_df.plot.scatter(x='total_average_gpa', y='average_rating')
+```
+
+This scatterplot helps show
+  
 ## Application
 An application that might prove to be potentially useful is coming up with some sort of ranking for professors based on their average rating that better reflects reality. Currently, the metric of average_rating is not necessarily the most accurate in determining how popular a professor is with his/her students because a single 5 rating will automatically put that professor at the top. Is there a way to better capture this percieved popularity? A possible solution is to use the Bayesian average of the average rating, which takes into account the amount of reviews that that professor recieved. Let's try it out on CS professors and see if it matches our expectations as a CS student.
 
