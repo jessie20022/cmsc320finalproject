@@ -185,3 +185,18 @@ grades_df.head(5)
 |   NFSC431   |   Abani Pradhan  |   201301    |   101      |   4   |   8   |   2   |   5   |   2  |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
 |   NFSC679R  |   Abani Pradhan  |   201308    |   101      |   1   |   3   |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
 |   NFSC431   |   Abani Pradhan  |   201401    |   101      |   4   |   5   |   2   |   3   |   3  |   2   |   1   |   0  |   0   |   0   |   1  |   0   |   0  |   1  |   0      |
+
+```
+from matplotlib import pyplot as plt
+import numpy as np
+
+index = np.asarray([i for i in range(1, 6)])
+
+plt.hist(prof_df["average_rating"], bins=5)
+plt.xticks(index)
+plt.title("Average Rating vs Count Distribution of all courses")
+plt.xlabel("Average Rating")
+plt.ylabel("Count")
+
+plt.show()
+```
