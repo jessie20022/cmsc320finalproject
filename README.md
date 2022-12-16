@@ -90,7 +90,7 @@ The following is the response schema for each of the 3 endpoints.
 | W         | integer | Count of W                                            |
 | Other     | integer | Count of Other                                        |
 
-On our initial observation using the PlanetTerp API, we found that the API has a limit of 100 responses with an offset parameter. Therefore intuitively, to build our dataframes, we would have to query our API, increment the offset by 100 and then continue to query until we run out of data. This is what we attempted to do in the following code. 
+Using the requests library, we can interact with our API by sending HTTP GET requests to the endpoints and specifying parameters. On our initial observation using the PlanetTerp API, we found that the API has a limit of 100 responses with an offset parameter. Therefore intuitively, to build our dataframes, we would have to query our API, increment the offset by 100 and then continue to query until we run out of data. This is what we attempted to do in the following code. 
 
 However, we found that this block took roughly ~10 min to generate the dataframe, which we found to be unsustainable for later, when we desire to have immediate new copies of our dataframe. Therefore, we decided to generate a csv file for our data, and then call read_csv to generate our dataframe in an efficient manner.
 
@@ -131,6 +131,7 @@ grades_df
 
 grades_df.to_csv('grades_df.csv')
 ```
+
 
 ```
 all_courses_df.head(5)
