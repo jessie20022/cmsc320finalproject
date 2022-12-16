@@ -232,4 +232,5 @@ plt.show()
 From these visualiations, we can take note of a few general trends that are significant (for general data across all departments):
 * Average Rating
   * It appears that much more reviews that are left on PlanetTerp are overwhelmingly positive. The most reviews left were a 5 rating, and the count incrementally decreases for each consecutive lower rating
-* It also appears that As are the mostly commonly recieved grade, which seems to be in line with the 
+  * This appears as a completely left skewed distribution, which agrees with our sentiment that most of the observations occur in the medium/high range of the distribution.
+* It appears that As are the mostly commonly recieved grade, which seems to be in line with the 
