@@ -131,7 +131,14 @@ grades_df
 
 grades_df.to_csv('grades_df.csv')
 ```
+Now, let's import our csv files as Pandas dataframes, dropping 
+```
+all_courses_df = pd.read_csv('all_courses.csv', na_filter=True, na_values='[]', index_col=0)
 
+# drop rows with no average_gpa or reviews 
+all_courses_df = all_courses_df.loc[all_courses_df["average_gpa"] == all_courses_df["average_gpa"]]
+all_courses_df = all_courses_df.loc[all_courses_df["reviews"] == all_courses_df["reviews"]]
+```
 
 ```
 all_courses_df.head(5)
