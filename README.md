@@ -357,10 +357,25 @@ scat_cmsc_df
 Here, we are creating a new dataframe to store all of the data we will need to graph our scatterplot by using existing data from previous dataframes and calculating the average GPAs for each professor using the prior function created. 
   
 ```
+#remove 0 avg_gpa to prevent a wrong liner regression line
+scat_cmsc_df = scat_cmsc_df.loc[scat_cmsc_df["total_average_gpa"] != 0]
+
 scat_cmsc_df.plot.scatter(x='total_average_gpa', y='average_rating')
+
+x = scat_cmsc_df['total_average_gpa']
+y = scat_cmsc_df['average_rating']
+
+# linear regression through scatterplot
+m, b = np.polyfit(x, y, 1)
+print("Linear model equation: " + str(m) + "x + " + str(b))
+
+# graph linear model
+coef = np.polyfit(x, y, 1)
+poly1d_fn = np.poly1d(coef)
+plt.plot(x, poly1d_fn(x), color='red')
 ```
 
-Graphed into a scatterplot, the data from the scat_cmsc_df dataframe is displayed and shows many points in the 0 end and higher ends. The reason for many points in the 0 region for average GPA is because the grades_df contains rows of grade data where no grade was earned, resulting in a 0 GPA. This occurs for a few professors. However, there are many professors with high average GPA and high average ratings and low points where it's a high average GPA with a low rating.
+Graphed into a scatterplot, the data from the scat_cmsc_df dataframe is displayed. Originally, the scatterplot would show many points in the 0 GPA area with ratings, so we decided to remove this to prevent an inaccurate linear regression model. The reason for many points in the 0 region for average GPA is because the grades_df contains rows of grade data where no grade was earned, resulting in a 0 GPA. This occurs for a few professors. However, after removal, we can see that there are many professors with high average GPA and high average ratings and low points where it's a high average GPA with a low rating. The data points seen on the scatterplot was then used to create a linear regression line as seen in red. From intuitive observation, the model seems underfit. This means this is not be a good predictor for average rating or average GPA. From the slope of the linear regression line, we can see that having a higher average GPA is not representative of having higher average ratings.
   
 ```
 scat_knes_df = pd.DataFrame()
@@ -379,10 +394,25 @@ scat_knes_df
 Like scat_cmsc_df, we are once again creating a new dataframe to store all of the data we will need to graph our scatterplot for KNES professors by using existing data and calculating the average GPAs for each professor in KNES using the prior function calcAvgGPA. 
   
 ```
+# remove 0 avg_gpa to prevent a wrong liner regression line
+scat_knes_df = scat_knes_df.loc[scat_knes_df["total_average_gpa"] != 0]
+
 scat_knes_df.plot.scatter(x='total_average_gpa', y='average_rating')
+
+x = scat_knes_df['total_average_gpa']
+y = scat_knes_df['average_rating']
+
+# linear regression through scatterplot
+m, b = np.polyfit(x, y, 1)
+print("Linear model equation: " + str(m) + "x + " + str(b))
+
+# graph linear model
+coef = np.polyfit(x, y, 1)
+poly1d_fn = np.poly1d(coef)
+plt.plot(x, poly1d_fn(x), color='red')
 ```
 
-This scatterplot also shows the comparison of total average GPA to the average rating. There are much fewer data points than compared to the CMSC scatter plot, however it is still noticible that there are few points where it has a high average GPA and a low review, unlike the majority of points where there is a high average rating and a high total average GPA.
+This scatterplot also shows the comparison of total average GPA to the average rating. There are much fewer data points than compared to the CMSC scatter plot, however the points look more distributed, possibly an upward trend prior to the linear regression line. However, once we graphed the linear regression line, we were able to determine that there was indeed a positive relationship between the total average GPA and the average reviews. From our observation, the model is also underfit despite the positive relationship as observed. However, we still cannot conclude anything definitively. 
   
 ## Application
 An application that might prove to be potentially useful is coming up with some sort of ranking for professors based on their average rating that better reflects reality. Currently, the metric of average_rating is not necessarily the most accurate in determining how popular a professor is with his/her students because a single 5 rating will automatically put that professor at the top. Is there a way to better capture this percieved popularity? A possible solution is to use the Bayesian average of the average rating, which takes into account the amount of reviews that that professor recieved. Let's try it out on CS professors and see if it matches our expectations as a CS student.
