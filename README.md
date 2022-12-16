@@ -247,6 +247,16 @@ cmsc_courses_df = cmsc_courses_df.loc[cmsc_courses_df["department"] == "CMSC"]
 cmsc_courses_df
 ```
 
+```
+cmsc_prof = []
+cmsc_prof_df = pd.DataFrame()
+for index, row in prof_df.iterrows():
+    if "CMSC" in row['courses']:
+      cmsc_prof.append(row)
+
+cmsc_prof_df = pd.DataFrame(cmsc_prof, columns=prof_df.columns)
+cmsc_prof_df
+```
   
 ```
 cmsc_grades = []
@@ -263,4 +273,26 @@ cmsc_grades_df
 bmgt_courses_df = all_courses_df
 bmgt_courses_df = bmgt_courses_df.loc[bmgt_courses_df["department"] == "BMGT"]
 bmgt_courses_df
+```
+
+```
+bmgt_prof = []
+bmgt_prof_df = pd.DataFrame()
+for index, row in prof_df.iterrows():
+    if "BMGT" in row['courses']:
+      bmgt_prof.append(row)
+
+bmgt_prof_df = pd.DataFrame(bmgt_prof, columns=prof_df.columns)
+bmgt_prof_df
+```
+  
+```
+bmgt_grades = []
+bmgt_grades_df = pd.DataFrame()
+for g, row in grades_df.iterrows():
+    if row['course'].startswith('BMGT'):
+      bmgt_grades.append(row)
+
+bmgt_grades_df = pd.DataFrame(bmgt_grades, columns=grades_df.columns)
+bmgt_grades_df
 ```
