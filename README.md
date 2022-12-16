@@ -151,3 +151,5 @@ grades_df.head(5)
 |   NFSC431   |   Abani Pradhan  |   201301    |   101      |   4   |   8   |   2   |   5   |   2  |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
 |   NFSC679R  |   Abani Pradhan  |   201308    |   101      |   1   |   3   |   2   |   0   |   0  |   0   |   0   |   0  |   0   |   0   |   0  |   0   |   0  |   0  |   0      |
 |   NFSC431   |   Abani Pradhan  |   201401    |   101      |   4   |   5   |   2   |   3   |   3  |   2   |   1   |   0  |   0   |   0   |   1  |   0   |   0  |   1  |   0      |
+
+whoever was here is gay
