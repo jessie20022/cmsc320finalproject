@@ -217,9 +217,6 @@ plt.ylabel("Count")
 plt.show()
 ```
 
-From these visualiations, we can take note of a few general trends:
-* It appears that much more reviews that are left on PlanetTerp are 
-
 ```
 index = np.asarray([i for i in range(1, 5)])
 
