@@ -229,7 +229,7 @@ plt.ylabel("Count")
 plt.show()
 ```
 
-From these visualiations, we can take note of a few general trends that are significant (for general data across all departments):
+From these visualizations, we can take note of a few general trends that are significant (for general data across all departments):
 * Average Rating Distribution
   * It appears that much more reviews that are left on PlanetTerp are overwhelmingly positive. The most reviews left were a 5 rating, and the count incrementally decreases for each consecutive lower rating
   * This appears as a completely left skewed distribution, which agrees with our sentiment that most of the observations occur in the medium/high range of the distribution
@@ -239,8 +239,8 @@ From these visualiations, we can take note of a few general trends that are sign
 * Average GPA Distribution
   * The median average GPA across all courses appears to hover around the 3.3 area, with a slightly left skewed distribution
 
-Now that we have an idea about our entire dataset
-  
+Now that we have an idea about our entire dataset, let's try to identify some potential new trends solely in the CS department. We will once again plot the distributions of average rating, average GPA and letter grades but this time only for entries in the CS department.
+
 ```
 cmsc_courses_df = all_courses_df
 cmsc_courses_df = cmsc_courses_df.loc[cmsc_courses_df["department"] == "CMSC"]
