@@ -90,4 +90,4 @@ The following is the response schema for each of the 3 endpoints.
 | W         | integer | Count of W                                            |
 | Other     | integer | Count of Other                                        |
 
-The PlanetTerp APi has a limit of Initially, we 
+On our initial observation using the PlanetTerp API, we found that the API has a limit of 100 responses with an offset parameter. Therefore intuitively, to build our dataframes, we 
