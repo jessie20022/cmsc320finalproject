@@ -23,3 +23,7 @@ Numpy: https://numpy.org/doc/stable/user/quickstart.html Numpy is essentially an
 Matplotlib: https://matplotlib.org/stable/api/index Matplotlib is ython's plotting library consisting of a variety of plotting methods. The most common one is pyplot and it creates a very basic line/dot plot on a coordinate plane. More advanced plotting methods are discussed in the link above.
 
 Scikit-learn: https://scikit-learn.org/stable/user_guide.html Scikit-learn is Python's machine learning library consisting of tools for data modeling and predictions. Some algorithms scikit-learn is capable of are classification, regression, clustering, preprocessing and many more. More information can be found in the link above.
+
+  import requests
+  import pandas as pd
+  import time
