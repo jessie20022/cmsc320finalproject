@@ -15,13 +15,14 @@ Reviews have become a very critical part of any student's education, especially 
 [Pandas](https://pandas.pydata.org/docs/user_guide/index.html#user-guide): 
 Python Pandas is a extremely useful data analysis/manipulation and documentation tool released in the late 2000s. The storage of data and analysis done in this tutorial is mainly done with Pandas. The user guide linked above provides documentation of functions and uses of pandas.
 
-Time: https://docs.python.org/3/library/time.html *The time toolbox is a useful function that is used in this tutorial to configure for loops. More functions can be found in the link above. *
+[Time](https://docs.python.org/3/library/time.html): *The time toolbox is a useful function that is used in this tutorial to configure for loops. More functions can be found in the link above. *
 
 Numpy: https://numpy.org/doc/stable/user/quickstart.html Numpy is essentially an array. Used for storing data, mathmatical functions, and matrix operations. More information can be found in the link above.
 
 Matplotlib: https://matplotlib.org/stable/api/index Matplotlib is ython's plotting library consisting of a variety of plotting methods. The most common one is pyplot and it creates a very basic line/dot plot on a coordinate plane. More advanced plotting methods are discussed in the link above.
 
 Scikit-learn: https://scikit-learn.org/stable/user_guide.html Scikit-learn is Python's machine learning library consisting of tools for data modeling and predictions. Some algorithms scikit-learn is capable of are classification, regression, clustering, preprocessing and many more. More information can be found in the link above.
+
 
 ```
 import requests
