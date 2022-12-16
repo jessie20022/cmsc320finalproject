@@ -298,7 +298,7 @@ knes_grades_df
 ```
 
 ## Hypothesis Test
-In this section of the tutorial, we aim to see whether there is a statistically significant different in the mean average GPA of all CMSC (Computer Science) and KNES (Kinesiology) courses. We want to accomplish this using a two sample t test, where we are essentially testing whether two population means are equal. In this case, we are using the unpaired variation of the test because we can not assume that the samples are correlated. In this situation, our null hypothesis $H_0$ is that 
+In this section of the tutorial, we aim to see whether there is a statistically significant different in the mean average GPA of all CMSC (Computer Science) and KNES (Kinesiology) courses. We want to accomplish this using a two sample t test, where we are essentially testing whether two population means are equal. In this case, we are using the unpaired variation of the test because we can not assume that the samples are correlated. In this situation, our null hypothesis $H_0$ is that the populations 
 
   
 Expanding upon this, as we feel the need to incorporate other departments into our calculation, we would likely need an ANOVA test, which would test for whether any statistically significant differences exist between the means of three or more groups (which would be the different departments in our case). This can be followed up with Tukey's procedure to find the means that are significantly different from each other.
