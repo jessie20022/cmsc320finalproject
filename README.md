@@ -115,7 +115,30 @@ all_courses_df
 
 all_courses_df.to_csv('all_courses.csv')
 ```
-and we did a very similar procedure for the professors endpoint. However, to get grades, we had to reference our previous professors dataframe to be able to get our grades dataframe since professor is a required parameter for this endpoint. Thus,
+We did a very similar procedure for the professors endpoint. 
+
+```
+prof_df = pd.DataFrame()
+
+api_url = 'https://api.planetterp.com/v1'
+response = requests.get(api_url + "/professors?type=professor&reviews=true")
+data = response.json()
+prof_df = pd.DataFrame.from_dict(data)
+
+for i in range (1, 117):
+  r = "/professors?type=professor&reviews=true&offset=" + str(i) + "00"
+  response = requests.get(api_url + r)
+  data = response.json()
+  temp = pd.DataFrame.from_dict(data)
+  prof_df = pd.concat([prof_df, temp])
+  time.sleep(0.1)
+
+prof_df
+
+prof_df.to_csv('professors_data.csv')
+```
+
+However, to get grades, we had to reference our previous professors dataframe to be able to get our grades dataframe since professor is a required parameter for this endpoint. Thus,
 
 ```
 grades_df = pd.DataFrame()
