@@ -412,7 +412,9 @@ poly1d_fn = np.poly1d(coef)
 plt.plot(x, poly1d_fn(x), color='red')
 ```
 
-This scatterplot also shows the comparison of total average GPA to the average rating. There are much fewer data points than compared to the CMSC scatter plot, however the points look more distributed, possibly an upward trend prior to the linear regression line. However, once we graphed the linear regression line, we were able to determine that there was indeed a positive relationship between the total average GPA and the average reviews. From our observation, the model is also underfit despite the positive relationship as observed. However, we still cannot conclude anything definitively. 
+This scatterplot also shows the comparison of total average GPA to the average rating. There are much fewer data points than compared to the CMSC scatter plot, however the points look more distributed, possibly an upward trend prior to the linear regression line. However, once we graphed the linear regression line, we were able to determine that there was indeed a positive relationship between the total average GPA and the average reviews. From our observation, the model is also underfit despite the positive relationship as observed. However, we still cannot conclude anything definitively.
+  
+Let's check th3e coefficient of determination to 
   
 ## Application
 An application that might prove to be potentially useful is coming up with some sort of ranking for professors based on their average rating that better reflects reality. Currently, the metric of average_rating is not necessarily the most accurate in determining how popular a professor is with his/her students because a single 5 rating will automatically put that professor at the top. Is there a way to better capture this percieved popularity? A possible solution is to use the Bayesian average of the average rating, which takes into account the amount of reviews that that professor recieved. Let's try it out on CS professors and see if it matches our expectations as a CS student.
